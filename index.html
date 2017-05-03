@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>KnitCount</title>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+</head>
+<body>
+
+<style>
+body {
+    background: #110033;
+}
+table, th {
+    border: 1px solid white;
+    cellpadding: "100";
+}
+table#tab th {
+    background-color: #990055;
+    color: white;
+}
+ table#tab th:first-child {
+    width: 5%;
+}
+table#tab th:nth-child(even) {
+    font-size: 150px;
+    background-color: #550099;
+    width: 90%;
+}
+ table#tab th:last-child {
+    width: 5%;
+}
+</style>
+</head>
+<body>
+
+<table id="tab" style="width:100%">
+  <tr>
+    <th>minus</th>
+    <th>0</th>
+    <th>Reset</th>
+  </tr>
+</table>
+
+<script>
+var x = 0;
+
+$( 'th:first' ) .mouseup(function() {
+    x = x - 1;
+    if (x < 0) {  x = 0; }
+    $( 'th:eq(1)' ) .html(x);
+  });
+
+$( 'th:eq(1)' ) .mouseup(function() {
+    x = x + 1;
+    $( 'th:eq(1)' ) .html(x);
+  });
+
+$( 'th:last' ) .mouseup(function() {
+    x = 0;
+    $( 'th:eq(1)' ) .html(x);
+  });
+
+</script>
+
+</body>
+</html>
