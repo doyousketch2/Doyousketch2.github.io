@@ -1,67 +1,33 @@
-<!doctype html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="utf-8">
-  <title>KnitCount</title>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<title>Donate With PayPal</title>
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" href="css/flexslider.css" type="text/css">
 </head>
+
 <body>
+<div id = "main">
+<h1>Donate With PayPal</h1>
+<div id = "container">
+<h2>ZombiUnicorn Needs Your Support To Bring Back Smiles</h2>
+<h3>Help with either one of these great charities today!</h3>
+<hr/>
 
-<style>
-body {
-    background: #110033;
-}
-table, th {
-    border: 1px solid white;
-    cellpadding: "100";
-}
-table#tab th {
-    background-color: #990055;
-    color: white;
-}
- table#tab th:first-child {
-    width: 5%;
-}
-table#tab th:nth-child(even) {
-    font-size: 150px;
-    background-color: #550099;
-    width: 90%;
-}
- table#tab th:last-child {
-    width: 5%;
-}
-</style>
-</head>
-<body>
+<!-- charity container -->
+<div class="charity">
+<form action="process.php" method="POST">
+<br/>
+<b>$</b><input type="hidden" name="id" id='charity_id' value=''>
+<input type="number" value="2" name="amount" required="required" step=".25">
+<br/>
+<br/>
+<input type="submit" value="Donate to charity ONE!" name="submit">
+<input type="submit" value="Donate to charity TWO!" name="submit">
+</form>
 
-<table id="tab" style="width:100%">
-  <tr>
-    <th>minus</th>
-    <th>0</th>
-    <th>Reset</th>
-  </tr>
-</table>
-
-<script>
-var x = 0;
-
-$( 'th:first' ) .mouseup(function() {
-    x = x - 1;
-    if (x < 0) {  x = 0; }
-    $( 'th:eq(1)' ) .html(x);
-  });
-
-$( 'th:eq(1)' ) .mouseup(function() {
-    x = x + 1;
-    $( 'th:eq(1)' ) .html(x);
-  });
-
-$( 'th:last' ) .mouseup(function() {
-    x = 0;
-    $( 'th:eq(1)' ) .html(x);
-  });
-
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 </script>
-
 </body>
 </html>
