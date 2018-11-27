@@ -2,8 +2,7 @@
 
 <head>
 <title>Donate With PayPal</title>
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" href="css/flexslider.css" type="text/css">
+<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
@@ -15,18 +14,15 @@
 <hr/>
 
 <!-- charity container -->
-<div class="charity">
+
 <form action="process.php" method="POST">
-<br/>
 <b>$</b><input type="hidden" name="id" id='charity_id' value=''>
 <input type="number" value="2" name="amount" required="required" step=".25">
-<br/>
-<br/>
 <input type="submit" value="Donate to charity ONE!" name="submit">
 <input type="submit" value="Donate to charity TWO!" name="submit">
+</div>
 </form>
 
-</div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 </script>
 </body>
