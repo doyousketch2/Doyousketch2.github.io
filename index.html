@@ -8,6 +8,7 @@
 <body>
 <div id = "main">
 <h1>Donate With PayPal</h1>
+
 <div id = "container">
 <h2>ZombiUnicorn Needs Your Support To Bring Back Smiles</h2>
 <h3>Help with either one of these great charities today!</h3>
@@ -16,12 +17,15 @@
 <!-- charity container -->
 
 <form action="process.php" method="POST">
+
 <b>$</b><input type="hidden" name="id" id='charity_id' value=''>
+
 <input type="number" value="2" name="amount" required="required" step=".25">
 <input type="submit" value="Donate to charity ONE!" name="submit">
 <input type="submit" value="Donate to charity TWO!" name="submit">
-</div>
 </form>
+
+</div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
 </script>
