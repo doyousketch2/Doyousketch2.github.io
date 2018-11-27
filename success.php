@@ -42,4 +42,3 @@ echo "<div class='back_btn'><a href='index.php' id= 'btn'><< Back</a></div>";
 </div>
 </body>
 </html>
-
